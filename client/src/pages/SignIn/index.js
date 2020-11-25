@@ -35,7 +35,11 @@ export const SignIn = (props) =>{
     }
 
 
-
+    const handleKeypress = event => {
+        if (event.keyCode === 13) {
+            login();
+        }
+      };
     
 
         const disabled = !email || !password;
@@ -61,7 +65,7 @@ export const SignIn = (props) =>{
                                 <div className="form-row">
                                     <div className="col-lg-7">
                                         <p>Password</p>
-                                        <input type="password" placeholder="Enter your password" className="form-control my-3 p-4" onChange={evt => setPassword(  evt.target.value)}></input>
+                                        <input type="password" placeholder="Enter your password" className="form-control my-3 p-4" onChange={evt => setPassword(  evt.target.value)} onKeyDown={handleKeypress}></input>
                                     </div>
                                 </div>
                                 <div className="form-row">
