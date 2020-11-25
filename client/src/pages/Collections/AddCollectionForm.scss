@@ -1,0 +1,22 @@
+.form{
+    
+    input{
+        margin: 20px;
+    }
+
+    #daysInput{
+        width: 50px;
+    }
+
+    button{
+        background-color:rgb(208, 231, 223);
+        font-weight: bold;
+        font-size: 17px;
+        margin-left: 4px;
+        margin-bottom: 10px;
+    }
+    button:hover{
+        color: rgb(252, 85, 49);
+
+    }
+}

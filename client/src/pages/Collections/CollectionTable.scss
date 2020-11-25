@@ -1,0 +1,29 @@
+.collectionName{
+    cursor: pointer;
+}
+
+.collectionName:hover{
+    color: rgb(252, 85, 49);
+    font-weight: bold;
+}
+
+.tableHederRow{
+    overflow: auto;
+
+    th{
+        padding: 20px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    button{
+        margin: 10px;
+        background-color:rgb(208, 231, 223);
+    }
+    
+    button:hover{
+        color: rgb(252, 85, 49);
+        font-weight: bold;
+    }
+}
+

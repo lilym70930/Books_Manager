@@ -1,0 +1,177 @@
+ul.MuiGridList-root{
+    padding: 10px !important;
+    position: relative;
+    left: 140px;
+
+    li{
+        text-align: center ;
+    }
+}
+
+.MuiTypography-body2 {
+    font-size: 20px !important;
+}
+
+.bookCard{
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 24rem;
+    border-radius: 0.25rem;
+    text-align: center !important;
+    padding: 10px !important;
+    float: left;
+    width: 100%;
+    margin: 20px 25px 20px 25px ;
+    height: 497px;
+}
+
+
+.bookImage{
+    width: 94%;
+    height: 203px;
+    max-width: 100%;
+    padding-top: 1px;
+}
+
+.detailContainer{
+    padding: 1rem 1.5rem 1rem 1.5rem;
+
+   ul li{
+        text-align: center ;
+        padding-left: 0;
+    }
+}
+
+.btnsContainer{
+    height: 100px;
+    padding-left: 30px; 
+
+}
+
+.XXX{
+    color: rebeccapurple;
+    overflow: auto !important;  
+    padding-left: 30px; 
+}
+.mainBtnsContainer{
+    height: 142px;
+    overflow: auto;  
+    padding-left: 30px;  
+}
+.bookNameDiv{
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btns{
+    --text-opacity:1;
+    color: rgba(74, 85, 104, var(--text-opacity));
+    padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+    margin-right: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 11%;
+    --bg-opacity:1;
+    background-color: rgba(237, 242, 247, var(--bg-opacity));
+    float: left;
+    overflow: auto;
+    outline:none!important;
+    border: none;
+    margin-bottom: 5px;
+}
+
+ul{
+    list-style-type:none;
+}
+
+.sideBySide{
+    background-color: rgb(200, 225, 233);
+
+}
+
+.sideBySide:hover{
+    background-color: rgb(213, 228, 233);
+}
+
+.collectionsMenuItem{
+    border: 1px solid rgb(14, 14, 14);
+    padding: 3px;
+    background: rgb(216, 235, 233);
+    cursor: pointer;
+}
+
+.book-in-collection{
+    background:black;
+    color:wheat;
+}
+
+.unlikeBtn{
+    background: rgb(145, 175, 172);
+}
+
+.clear{
+    clear: both;
+}
+
+
+.btnReadingOnline{
+    margin-right: 223px; 
+    margin-right: 0.5rem;
+    float: left;
+    margin-bottom: 5px;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.btnReadingOnline:hover {
+    visibility: visible;
+}
+
+.dckAxC {
+    width: 100px;
+    height: 63px;
+    background: url("img.png") no-repeat !important;
+    cursor: pointer;
+    left: 179px;
+    top: -35px;
+    position: relative;
+}
+
+.jKRSSX{
+    left: 179px;
+    top: -37px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: url("img.png") no-repeat;
+    cursor: pointer;
+    background-position: -2799px 2px;
+    transition: url("img.png") no-repeat 1s steps(28) !important;
+}
+
+.undefined react-stars{
+    position: relative !important;
+    top: -30px !important;
+    overflow: none !important;
+    border: none !important;
+}
+
+
+.btnReadingOnLInk{
+    position: relative;
+    top: -101px;
+    left: 122px;
+    overflow: none;
+
+}
+
+.btnRate{
+    position: relative;
+    top: -68px;
+    overflow: none !important;
+    padding-top: auto;
+    border: none !important;
+
+}
