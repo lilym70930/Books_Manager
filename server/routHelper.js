@@ -9,6 +9,8 @@ const { v4: uuid } = require('uuid');
 
 async function init() {
     try {
+        console.log('url', url)
+
         const db = await MongoClient.connect(url)
         dbo = db.db(DB_name);
         const results = await dbo.collection(book_collection).find({});
