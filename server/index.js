@@ -4,7 +4,7 @@ const port = process.env.PORT || 4000;
 const routHelper = require('./routHelper');
 app.use(express.json());
 const path = require('path');
-const public = (path.join(__dirname,"..", 'client', 'public' ));
+const public = (path.join(__dirname,"..", 'client', 'build' ));
 
 
 
@@ -19,9 +19,9 @@ app.use((req, res, next) => {
 });
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
+app.get('/', (req, res) =>{
+  res.sendFile(path.join(public, 'index.html'));
+})
 
 app.post('/collections', (req,res) =>{
   console.log('inside new collection', req.body);
