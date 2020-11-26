@@ -18,6 +18,7 @@ app.use((req, res, next) => {
    next();
 });
 
+app.use(express.static( public));
 
 app.get('/', (req, res) =>{
   res.sendFile(path.join(public, 'index.html'));
