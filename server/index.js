@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 const routHelper = require('./routHelper');
 app.use(express.json());
+const path = require('path');
+const public = (path.join(__dirname,"..", 'client', 'public' ));
 
 
 
