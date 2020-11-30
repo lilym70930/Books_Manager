@@ -255,7 +255,7 @@ function Login(queryUser, res) {
 }
 
 function SignUp(req, res) {
-    MongoClient.connect(url, {  useNewUrlParser: true,useUnifiedTopology: true },  function (err, db) {
+    MongoClient.connect(url,  function (err, db) {
         if (err) {
             return res.status(500).send({ err });
         }

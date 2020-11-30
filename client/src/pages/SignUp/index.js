@@ -15,7 +15,7 @@ export const SignUp = (props) =>{
 
      const register = () => {
        console.log('INSIDE SIGNUP REGISTER');
-        axios.post(prefix +"/signUp", {
+        axios.post(prefix+"/signUp", {
           email,
           password
          

@@ -20,9 +20,7 @@ app.use((req, res, next) => {
 
 app.use(express.static( public));
 
-app.get('/', (req, res) =>{
-  res.sendFile(path.join(public, 'index.html'));
-})
+
 
 app.post('/collections', (req,res) =>{
   console.log('inside new collection', req.body);
@@ -77,9 +75,16 @@ app.post('/signIn', (req, res) => {
 });
 
 app.post('/signUp', (req, res) => {
-  console.log('signup', req.body);
-  return routHelper.SignUp(req, res);
+  console.log('signUp', req.body);
+  return routHelper.SignUp(req.body, res);
 });
+
+app.get('/', (req, res) =>{
+  res.sendFile(path.join(public, 'index.html'));
+})
+app.get('*', (req, res) =>{
+  res.sendFile(path.join(public, 'index.html'));
+})
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`)

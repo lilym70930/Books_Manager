@@ -19,7 +19,7 @@ export const SignIn = (props) =>{
 
 
   const  login = () => {
-        axios.post(prefix +'/signIn', {
+        axios.post(prefix+'/signIn', {
             email ,
             password
         }).then(res => {
@@ -43,9 +43,9 @@ export const SignIn = (props) =>{
         }
       };
     
-      const goSignUp =() =>{
-        return <Redirect to="/signup" />
-      }
+    //   const goSignUp =() =>{
+    //     return <Redirect to="/signup" />
+    //   }
 
         const disabled = !email || !password;
         return (
