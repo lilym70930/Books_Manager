@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import signUp_img from './signUp.jpg';
 
+const prefix = window.location.origin.includes('localhost') ? 'http://localhost:4000' : window.location.origin
 
 export const SignUp = (props) =>{
 
@@ -11,9 +12,10 @@ export const SignUp = (props) =>{
         const [redirectToHome, setRedirectToHome] = useState(false)
         const [isError, setIsError] = useState(false);
     
+
      const register = () => {
        
-        axios.post("http://localhost:4000/signUp", {
+        axios.post(prefix +"/signUp", {
           email,
           password
          

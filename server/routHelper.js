@@ -1,5 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
-const url = process.env.MONGODB_URI || "mongodb://localhost:27017/";
+console.log('process.env.MONGODB_URI', process.env.MONGODB_URI);
+const url = process.env.MONGODB_URI || "mongodb+srv://lily:lmc70930@cluster0.daoxh.mongodb.net" || "mongodb://localhost:27017/" ;
 const DB_name = 'book_manager_DB';
 const book_collection = 'collections' ;
 const rated_books = 'ratings';
@@ -11,7 +12,7 @@ async function init() {
     try {
         console.log('url', url)
 
-        const db = await MongoClient.connect(url)
+        const db = await MongoClient.connect(url, {  useNewUrlParser: true,useUnifiedTopology: true })
         dbo = db.db(DB_name);
         const results = await dbo.collection(book_collection).find({});
         const allCollections = await results.toArray();
@@ -229,10 +230,10 @@ async function RemoveFromCollection(req,res){
 }
 
 function Login(queryUser, res) {
-    if (queryUser.accessToken) {
-        return facebookLogin(queryUser, res);
-    }
-    MongoClient.connect(url, function (err, db) {
+    // if (queryUser.accessToken) {
+    //     return facebookLogin(queryUser, res);
+    // }
+    MongoClient.connect(url, {  useNewUrlParser: true,useUnifiedTopology: true }, function (err, db) {
         if (err) {
             return res.status(500).send({ err: 'err@' });
         }
@@ -254,7 +255,7 @@ function Login(queryUser, res) {
 }
 
 function SignUp(req, res) {
-    MongoClient.connect(url, function (err, db) {
+    MongoClient.connect(url, {  useNewUrlParser: true,useUnifiedTopology: true },  function (err, db) {
         if (err) {
             return res.status(500).send({ err });
         }

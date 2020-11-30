@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-
+const prefix = window.location.origin.includes('localhost') ? 'http://localhost:4000' : window.location.origin
 
 async function CreateCollection(collectionName) {
   console.log('inside collection name', collectionName)
 
 
   try {
-    const result = await axios.post('http://localhost:4000/collections', {
+    const result = await axios.post(prefix + '/collections', {
       collectionName, books: [], readonly: false
     })
 
@@ -30,7 +30,7 @@ async function AddToCollection(collectionId, book) {
 
   try {
     console.log('AddToCollection',collectionId, book );
-    const result = await axios.post(`http://localhost:4000/collections/${collectionId}/books`, book);
+    const result = await axios.post((prefix + `/collections/${collectionId}/books`, book);
     if (result.status === 200) {
       return result.data;
 
@@ -49,7 +49,7 @@ async function RemoveFromCollection(collectionId, bookToRemove) {
   try {
     console.log('removeFromCollection',collectionId, bookToRemove );
     const bookId = encodeURIComponent(bookToRemove.key)
-    const result = await axios.delete(`http://localhost:4000/collections/${collectionId}/books/${bookId}`);
+    const result = await axios.delete((prefix +`/collections/${collectionId}/books/${bookId}`);
     if (result.status === 200) {
       return result.data;
 
@@ -64,7 +64,7 @@ async function RemoveFromCollection(collectionId, bookToRemove) {
 
 async function GetCollections() {
   try {
-    const result = await axios.get('http://localhost:4000/collections')
+    const result = await axios.get((prefix +'/collections')
     if (result.status === 200) {
       console.log('res.data', result.data.collections);
       console.log('isArray data', Array.isArray(result.data.collections));
@@ -81,7 +81,7 @@ async function GetCollections() {
 async function UpdateCollection(updatedCollection) {
   try {
     console.log('updatedCollection', updatedCollection);
-    const result = await axios.patch(`http://localhost:4000/collections/${updatedCollection._id}`, {
+    const result = await axios.patch((prefix +`/collections/${updatedCollection._id}`, {
 
       collectionName: updatedCollection.collectionName
     });
@@ -101,7 +101,7 @@ async function DeleteCollection(id) {
 
   try {
 
-    const result = await axios.delete(`http://localhost:4000/collections/${id}`)
+    const result = await axios.delete((prefix +`/collections/${id}`)
     if (result.status === 204) {
       console.log('res.data', result.data)
       return id;
@@ -116,7 +116,7 @@ async function DeleteCollection(id) {
 
 async function GetRateBooks(){
   try {
-    const result = await axios.get('http://localhost:4000/rated-books')
+    const result = await axios.get((prefix +'/rated-books')
     if (result.status === 200) {
       console.log('res.data', result.data.books);
       return result.data.books;
@@ -130,7 +130,7 @@ async function GetRateBooks(){
 async function AddRateBook(book) {
 
   try {
-    const result = await axios.post('http://localhost:4000/rated-books', book);
+    const result = await axios.post((prefix +'/rated-books', book);
     if (result.status === 201) {
       return result.data;
 
@@ -146,7 +146,7 @@ async function AddRateBook(book) {
 async function UpdateBookRate(book) {
 
   try {
-    const result = await axios.patch(`http://localhost:4000/rated-books/${encodeURIComponent(book.key)}`, book);
+    const result = await axios.patch((prefix +`/rated-books/${encodeURIComponent(book.key)}`, book);
     if (result.status === 200) {
       console.log('UPDATED BOOK RATE')
       return result.data;

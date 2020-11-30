@@ -5,6 +5,7 @@ import './index.scss';
 import SignUp from '../SignUp/index';
 import { BrowserRouter, Route, Link, Switch, Router, Redirect } from "react-router-dom";
 
+const prefix = window.location.origin.includes('localhost') ? 'http://localhost:4000' : window.location.origin
 
 
 
@@ -17,7 +18,7 @@ export const SignIn = (props) =>{
 
 
   const  login = () => {
-        axios.post('http://localhost:4000/signIn', {
+        axios.post(prefix +'/signIn', {
             email ,
             password
         }).then(res => {
