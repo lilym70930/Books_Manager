@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/index.js",
-    "push": "git add . && git commit -am \"commit\"  && git push" 
+    "push": "git add . && git commit -am \"commit\"  && git push",
+    "build_push": "cd client && npm run build && cd.. && git add . && git commit -am \"commit\"  && git push"  
   },
   "keywords": [],
   "author": "",

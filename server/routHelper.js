@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 console.log('process.env.MONGODB_URI', process.env.MONGODB_URI);
-const url = process.env.MONGODB_URI || "mongodb+srv://lily:lmc70930@cluster0.daoxh.mongodb.net" || "mongodb://localhost:27017/" ;
+const url = process.env.MONGODB_URI ||  "mongodb://localhost:27017/" ;
 const DB_name = 'book_manager_DB';
 const book_collection = 'collections' ;
 const rated_books = 'ratings';

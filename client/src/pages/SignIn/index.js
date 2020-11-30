@@ -4,6 +4,7 @@ import signIn_img from './signIn_img.jpg';
 import './index.scss';
 import SignUp from '../SignUp/index';
 import { BrowserRouter, Route, Link, Switch, Router, Redirect } from "react-router-dom";
+import * as ReactBootStrap from 'react-bootstrap';
 
 const prefix = window.location.origin.includes('localhost') ? 'http://localhost:4000' : window.location.origin
 
@@ -72,7 +73,8 @@ export const SignIn = (props) =>{
                                 <div className="form-row">
                                     <div className="col-lg-7">
                                         <button type="button" className="btn1 mt-3 mb-5" onClick={login}>Login</button> <br></br>
-                                        <span><a  href='/signup'>Don't have an account?</a></span>
+                                        <span><ReactBootStrap.Nav.Link as={Link} to="/signup">Don't have an account?</ReactBootStrap.Nav.Link></span>
+                                        {/* <span><a  href='/signup'>Don't have an account?</a></span> */}
                                     </div>
                                     
                                     

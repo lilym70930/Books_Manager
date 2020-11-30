@@ -28,6 +28,7 @@
     "uuid": "^8.3.0"
   },
   "scripts": {
+    "THIS_IS_CLIENT": "",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "node -r esm tests",
