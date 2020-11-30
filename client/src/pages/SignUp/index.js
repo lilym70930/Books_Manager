@@ -14,12 +14,13 @@ export const SignUp = (props) =>{
     
 
      const register = () => {
-       
+       console.log('INSIDE SIGNUP REGISTER');
         axios.post(prefix +"/signUp", {
           email,
           password
          
         }).then(res => {
+          console.log('INSIDE SIGNUP CALLBACK,res.status= ', res.status);
           if (res.status === 201) {
               console.log('@@@res.data', res.data);
             return props.onLogin(res.data)

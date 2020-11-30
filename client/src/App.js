@@ -131,9 +131,10 @@ const addBooksRatingsToCollections = (serverCollections, serverRateBooks) =>{
   }
 
   const onLogin = (user) =>{
+    console.log('ONLOGIN,', user);
     setUser(user)
     localStorage.setItem('user', JSON.stringify(user))
-     document.location.href = "/"
+    //  document.location.href = "/"
   }
 
   const url= window.location.href;

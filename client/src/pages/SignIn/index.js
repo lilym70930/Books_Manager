@@ -43,6 +43,9 @@ export const SignIn = (props) =>{
         }
       };
     
+      const goSignUp =() =>{
+        return <Redirect to="/signup" />
+      }
 
         const disabled = !email || !password;
         return (
@@ -73,8 +76,8 @@ export const SignIn = (props) =>{
                                 <div className="form-row">
                                     <div className="col-lg-7">
                                         <button type="button" className="btn1 mt-3 mb-5" onClick={login}>Login</button> <br></br>
-                                        <span><ReactBootStrap.Nav.Link as={Link} to="/signup">Don't have an account?</ReactBootStrap.Nav.Link></span>
-                                        {/* <span><a  href='/signup'>Don't have an account?</a></span> */}
+                                      
+                                        <ReactBootStrap.Nav.Link as={Link} to="/signUp">Don't have an account?</ReactBootStrap.Nav.Link>
                                     </div>
                                     
                                     
