@@ -18,7 +18,7 @@ export const BooksSearch = (props) => {
   const [books, setBooks] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
-  const [text, setText] = useState('harry potter');
+  const [text, setText] = useState('');
   const [version, setVersion] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalBooks, setTotalBooks] = useState(0);

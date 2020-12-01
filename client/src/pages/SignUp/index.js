@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import signUp_img from './signUp.jpg';
 
-const prefix = window.location.origin.includes('localhost') ? 'http://localhost:4000' : window.location.origin
+const prefix = window.location.origin.includes('localhost') ? 'https://localhost:4000' : window.location.origin
 
 export const SignUp = (props) =>{
 

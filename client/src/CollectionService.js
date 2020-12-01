@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const prefix = window.location.origin.includes('localhost') ? 'http://localhost:4000' : window.location.origin
+const prefix = window.location.origin.includes('localhost') ? 'https://localhost:4000' : window.location.origin
 
 async function CreateCollection(collectionName) {
   console.log('inside collection name', collectionName)

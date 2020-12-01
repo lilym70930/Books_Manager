@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 console.log('process.env.MONGODB_URI', process.env.MONGODB_URI);
-const url = process.env.MONGODB_URI ||  "mongodb://localhost:27017/" ;
+const url = process.env.MONGODB_URI ||  'mongodb://localhost:27017/' ;
 const DB_name = 'book_manager_DB';
 const book_collection = 'collections' ;
 const rated_books = 'ratings';
@@ -255,7 +255,7 @@ function Login(queryUser, res) {
 }
 
 function SignUp(req, res) {
-    MongoClient.connect(url,  function (err, db) {
+    MongoClient.connect(url, {  useNewUrlParser: true,useUnifiedTopology: true },  function (err, db) {
         if (err) {
             return res.status(500).send({ err });
         }

@@ -9,8 +9,8 @@ const public = (path.join(__dirname,"..", 'client', 'build' ));
 
 
 app.use((req, res, next) => {
-  console.log('middleware for cors')
-  console.log('got req for:', req.method, req.url)
+  // console.log('middleware for cors')
+  // console.log('got req for:', req.method, req.url)
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,PATCH,DELETE");
@@ -76,7 +76,7 @@ app.post('/signIn', (req, res) => {
 
 app.post('/signUp', (req, res) => {
   console.log('signUp', req.body);
-  return routHelper.SignUp(req.body, res);
+  return routHelper.SignUp(req, res);
 });
 
 app.get('/', (req, res) =>{
@@ -85,6 +85,7 @@ app.get('/', (req, res) =>{
 app.get('*', (req, res) =>{
   res.sendFile(path.join(public, 'index.html'));
 })
+
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`)

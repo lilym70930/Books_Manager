@@ -6,7 +6,7 @@ import SignUp from '../SignUp/index';
 import { BrowserRouter, Route, Link, Switch, Router, Redirect } from "react-router-dom";
 import * as ReactBootStrap from 'react-bootstrap';
 
-const prefix = window.location.origin.includes('localhost') ? 'http://localhost:4000' : window.location.origin
+const prefix = window.location.origin.includes('localhost') ? 'https://localhost:4000' : window.location.origin
 
 
 
