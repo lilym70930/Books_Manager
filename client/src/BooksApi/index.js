@@ -2,10 +2,10 @@ import consts from '../consts';
 const {bookPerPage}=consts;
 
 const getApiSearchUrl = (searchTerm, page) =>
-  `http://openlibrary.org/search.json?q=${searchTerm}&page=${page}&limit=${bookPerPage}`;
+  `https://openlibrary.org/search.json?q=${searchTerm}&page=${page}&limit=${bookPerPage}`;
 
 export const getBookCoverByOLID = (olid) =>
-  `http://covers.openlibrary.org/b/olid/${olid}-M.jpg`;
+  `https://covers.openlibrary.org/b/olid/${olid}-M.jpg`;
 
 export const searchBooks = async (searchTerm = "", page=1) => {
   const { docs, numFound } = await fetch(getApiSearchUrl(searchTerm, page)).then((r) => r.json());
