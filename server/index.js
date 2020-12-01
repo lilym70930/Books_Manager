@@ -5,7 +5,7 @@ const routHelper = require('./routHelper');
 app.use(express.json());
 const path = require('path');
 const public = (path.join(__dirname,"..", 'client', 'build' ));
-
+const bodyParser = require('body-parser');
 
 
 app.use((req, res, next) => {
@@ -17,6 +17,10 @@ app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers");
    next();
 });
+
+app.use(bodyParser.urlencoded({
+  extended: true,
+}));
 
 app.use(express.static( public));
 
