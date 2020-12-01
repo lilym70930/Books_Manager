@@ -7,7 +7,7 @@ const CollectionTable = (props) => (
         <thead >
             <tr>
                 <th>Collection Name</th>
-                <th># Books </th>
+                <th> Books # </th>
             </tr>
         </thead>
         <tbody>
